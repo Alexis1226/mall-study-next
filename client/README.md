@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+###
 
-## Getting Started
+프론트엔드 마이그레이션 참고 사이트
 
-First, run the development server:
+- https://www.educative.io/answers/steps-for-migrating-an-existing-react-project-to-next-js
+
+# Mall
+
+![Mall image](/public/Mall.png)
+기존에 작업했던 쇼핑몰 [어플리케이션](https://github.com/Alexis1226/mall-study)을 Next.js로 마이그레이션한 프로젝트
+
+## 설치 및 실행
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+$ git clone https://github.com/Alexis1226/mall-study.git
+
+# for client-side
+$ yarn client
+
+# for server-side
+$ yarn server
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+http://localhost:3000 으로 접속
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 기술 스택
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Frontend: React.js, Typescript, Vite, Recoil, React-Query, SCSS
 
-## Learn More
+Backend: GraphQL, AplloClient, Firebase
 
-To learn more about Next.js, take a look at the following resources:
+Deployment: Vercel & Heroku
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Trouble Shooting
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- RootLayout에서 라이브러리 세팅 불가 [블로그](https://alexisw.tistory.com/44)
