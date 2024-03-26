@@ -16,7 +16,6 @@
     "start": "cd server && npm run server"
   },
   "dependencies": {
-    "dotenv": "^16.3.1",
-    "vite": "^5.0.6"
+    "dotenv": "^16.3.1"
   }
 }

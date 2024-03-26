@@ -20,7 +20,7 @@ http://localhost:3000 으로 접속
 
 ## 기술 스택
 
-Frontend: React.js, Typescript, Vite, Recoil, React-Query, SCSS
+Frontend: React.js, Typescript, Recoil, React-Query, SCSS
 
 Backend: GraphQL, AplloClient, Firebase
 
