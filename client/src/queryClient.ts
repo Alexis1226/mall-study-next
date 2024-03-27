@@ -20,7 +20,7 @@ export const getClient = (() => {
   };
 })();
 
-const BASE_URL = process.env.SERVER_URL as string;
+const BASE_URL = process.env.NEXT_PUBLIC_SERVER_URL as string;
 
 export const graphQlFetcher = (query: RequestDocument, variables = {}) =>
   request(`${BASE_URL}/graphql`, query, variables, {

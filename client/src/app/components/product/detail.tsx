@@ -14,7 +14,13 @@ const ProductDetail = ({
   return (
     <div className="product-detail">
       <h2 className="product-detail__title">{title}</h2>
-      <Image className="product-detail__image" src={imageUrl} alt="product_image" />
+      <Image
+        className="product-detail__image"
+        src={imageUrl}
+        alt="product_image"
+        width={300}
+        height={300}
+      />
       <div className="product__price-button">
         <span className="product-detail__price">₩{price}</span>
         <button className="product-detail__add-cart" onClick={() => addCart(id)}>

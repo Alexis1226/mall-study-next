@@ -12,7 +12,13 @@ const ProductItem = ({ id, imageUrl, price, title }: Product) => {
     <li className="product-item">
       <Link href={`/products/${id}`}>
         <p className="product-item__title">{title}</p>
-        <Image className="product-item__image" src={imageUrl} alt="item image" />
+        <Image
+          className="product-item__image"
+          src={imageUrl}
+          alt="item image"
+          width={300}
+          height={300}
+        />
       </Link>
       <div className="product__price-button">
         <span className="product-item__price">₩{price}</span>

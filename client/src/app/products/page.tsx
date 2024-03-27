@@ -14,7 +14,6 @@ const ProductListPage = () => {
     useInfiniteQuery<Products>({
       queryKey: [QueryKeys.PRODUCTS, 'products'],
       queryFn: ({ pageParam }) => graphQlFetcher(GET_PRODUCTS, { cursor: pageParam }),
-      initialPageParam: 1,
       getNextPageParam: (lastPage) => {
         return lastPage.products.at(-1)?.id;
       },
