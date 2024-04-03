@@ -134,7 +134,7 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@eslint-community/eslint-utils@^4.2.0":
+"@eslint-community/eslint-utils@^4.2.0", "@eslint-community/eslint-utils@^4.4.0":
   version "4.4.0"
   resolved "https://registry.npmjs.org/@eslint-community/eslint-utils/-/eslint-utils-4.4.0.tgz"
   integrity sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==
@@ -852,6 +852,13 @@
   dependencies:
     tslib "^2.4.0"
 
+"@tanstack/eslint-plugin-query@^5.28.11":
+  version "5.28.11"
+  resolved "https://registry.yarnpkg.com/@tanstack/eslint-plugin-query/-/eslint-plugin-query-5.28.11.tgz#0a46f2b301b706d993fc4bc25fef60c1fb639101"
+  integrity sha512-bODGLeG4WCGmHVKCh3bH1KLfq7xdi1jsRjTESV6ifCw1mZ0m2fBMxAjK42KjbhJwcvNdTlYHI+YY/aZWBk4Niw==
+  dependencies:
+    "@typescript-eslint/utils" "^6.20.0"
+
 "@tanstack/query-core@5.20.1":
   version "5.20.1"
   resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.20.1.tgz#e5541be149b62c0bc8c53deb6b02cc74e62b38c1"
@@ -875,6 +882,46 @@
   integrity sha512-KRkOtJ47tv9B3EXfjHkbPkiFzOzYCOid8BrYBozk0rm9JpDB2xSf71q8w1PRudlQW6QUQIEDI9E6NIMh6AlLUw==
   dependencies:
     "@tanstack/query-core" "5.20.1"
+
+"@tosspayments/brandpay-types@^0.2.6":
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/@tosspayments/brandpay-types/-/brandpay-types-0.2.6.tgz#0a64d6cd4a6be97af374ad6cf0f2d155312d3819"
+  integrity sha512-FY8aOm/2rqtXjYux9ZdNTL6GC5+VNIw8eOQ7TP01dS2uGWSzAtR6uuw9HVsgkmJtSyJgmo97tjmbio5oyeyFlg==
+
+"@tosspayments/payment-widget-sdk@^0.10.2":
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/@tosspayments/payment-widget-sdk/-/payment-widget-sdk-0.10.2.tgz#0e702fbd9f8c45ff4426da6fe076b7f75743ff9a"
+  integrity sha512-0dpkEbnDXmvIwpHYm+YODpMhh/gAtvJRYOU5uikFQpM/XCkyZDXAP9C6pc+GhiT6NsWIKKFILwaSgAeL/UT3ow==
+  dependencies:
+    "@tosspayments/payment-widget__types" "1.0.1"
+
+"@tosspayments/payment-widget-types@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@tosspayments/payment-widget-types/-/payment-widget-types-0.0.5.tgz#649f1baf063eaeb59bcd24d6a2064f0841aed9fe"
+  integrity sha512-Daaui9u7aRPzJhw4omJIUAbYBSmNAFNjWWkuUnX9uHxzE3gtjcJHIpGrjlzmCFm+j3ZH4rgyrgv4pkazVYH3OQ==
+
+"@tosspayments/payment-widget__types@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@tosspayments/payment-widget__types/-/payment-widget__types-1.0.1.tgz#5ecc9df87915715417eb839f24d897c25ca6c79e"
+  integrity sha512-p2l6ni4ZAH0Jh7Yo4hwwDAECN0rz6Io9R19oBJ5ZkL0H1upMhGzT6xrdymIYQwcUSzIcwHwI2u03eeAX19hmug==
+  dependencies:
+    "@tosspayments/brandpay-types" "^0.2.6"
+    "@tosspayments/payment-widget-types" "^0.0.5"
+    "@tosspayments/payment__types" "^1.66.3"
+
+"@tosspayments/payment__types@^1.66.3":
+  version "1.67.2"
+  resolved "https://registry.yarnpkg.com/@tosspayments/payment__types/-/payment__types-1.67.2.tgz#182f5e72b58985c747ba6219ee8dca3f2c3361a8"
+  integrity sha512-GVXhGeKSruo4VTi8GNLISvhDeF4HfVLPN4UHjo2Dl3e7DPh40h6TKq5nCnt5hVbH7CcpyE5yfbWvI2RV0ABDcw==
+  dependencies:
+    "@tosspayments/sdk-constants" "^0.2.2"
+
+"@tosspayments/sdk-constants@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@tosspayments/sdk-constants/-/sdk-constants-0.2.2.tgz#91bd84fc1543eb2382b2a9b40792eed9f9146b1e"
+  integrity sha512-qTIcD9JnVtN65/yiW5sPAlvK5fpQtDluv4IEyslubncbQLQKE+ePSnGZU1fLNPxcchv6QTnwmgj9Ndm6EN/Ymg==
+  dependencies:
+    type-fest "^2.11.2"
 
 "@tsconfig/node10@^1.0.7":
   version "1.0.9"
@@ -970,6 +1017,11 @@
   resolved "https://registry.yarnpkg.com/@types/http-errors/-/http-errors-2.0.4.tgz#7eb47726c391b7345a6ec35ad7f4de469cf5ba4f"
   integrity sha512-D0CFMMtydbJAegzOyHjtiKPLlvnm3iTZyZRSZoLq2mRhDdmLfIWOCYPfQJ4cu2erKghU++QvjcUjp/5h7hESpA==
 
+"@types/json-schema@^7.0.12":
+  version "7.0.15"
+  resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.15.tgz#596a1747233694d50f6ad8a7869fcb6f56cf5841"
+  integrity sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==
+
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
@@ -1033,10 +1085,22 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
+"@types/recoil@^0.0.9":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@types/recoil/-/recoil-0.0.9.tgz#a5efceda791ee2720418e232445bb34f4f2e4be9"
+  integrity sha512-dXKcvdzQbkFCcULgxhtc/3shoCNqsspRUY1KwIUYcAzgS0qY7+IxlcjRjq+9PizFnzKrHESllkbezqCMstPmQA==
+  dependencies:
+    recoil "*"
+
 "@types/scheduler@*":
   version "0.16.4"
   resolved "https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.4.tgz"
   integrity sha512-2L9ifAGl7wmXwP4v3pN4p2FLhD0O1qsJpvKmNin5VA8+UvNVb447UDaAEV6UdrkA+m/Xs58U1RFps44x6TFsVQ==
+
+"@types/semver@^7.5.0":
+  version "7.5.8"
+  resolved "https://registry.yarnpkg.com/@types/semver/-/semver-7.5.8.tgz#8268a8c57a3e4abd25c165ecd36237db7948a55e"
+  integrity sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==
 
 "@types/send@*":
   version "0.17.4"
@@ -1097,6 +1161,19 @@
     minimatch "9.0.3"
     semver "^7.5.4"
     ts-api-utils "^1.0.1"
+
+"@typescript-eslint/utils@^6.20.0":
+  version "6.21.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/utils/-/utils-6.21.0.tgz#4714e7a6b39e773c1c8e97ec587f520840cd8134"
+  integrity sha512-NfWVaC8HP9T8cbKQxHcsJBY5YE1O33+jpMwN45qzWWaPDZgLIbo12toGMWnmhvCpd3sIxkpDw3Wv1B3dYrbDQQ==
+  dependencies:
+    "@eslint-community/eslint-utils" "^4.4.0"
+    "@types/json-schema" "^7.0.12"
+    "@types/semver" "^7.5.0"
+    "@typescript-eslint/scope-manager" "6.21.0"
+    "@typescript-eslint/types" "6.21.0"
+    "@typescript-eslint/typescript-estree" "6.21.0"
+    semver "^7.5.4"
 
 "@typescript-eslint/visitor-keys@6.21.0":
   version "6.21.0"
@@ -3564,7 +3641,7 @@ readdirp@~3.6.0:
   dependencies:
     picomatch "^2.2.1"
 
-recoil@^0.7.7:
+recoil@*, recoil@^0.7.7:
   version "0.7.7"
   resolved "https://registry.yarnpkg.com/recoil/-/recoil-0.7.7.tgz#c5f2c843224384c9c09e4a62c060fb4c1454dc8e"
   integrity sha512-8Og5KPQW9LwC577Vc7Ug2P0vQshkv1y3zG3tSSkWMqkWSwHmE+by06L8JtnGocjW6gcCvfwB3YtrJG6/tWivNQ==
@@ -4080,6 +4157,11 @@ type-fest@^0.20.2:
   version "0.20.2"
   resolved "https://registry.npmjs.org/type-fest/-/type-fest-0.20.2.tgz"
   integrity sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==
+
+type-fest@^2.11.2:
+  version "2.19.0"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.19.0.tgz#88068015bb33036a598b952e55e9311a60fd3a9b"
+  integrity sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==
 
 type-is@~1.6.18:
   version "1.6.18"
