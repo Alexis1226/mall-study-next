@@ -1,10 +1,8 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import '../../styles/globals.css';
-import Gnb from './components/gnb';
-import Provider from 'utils/provider';
-
-const inter = Inter({ subsets: ['latin'] });
+import '@styles/globals.css';
+import '@fontsource/dongle';
+import Header from '@components/layout/header';
+import Provider from '@utils/provider';
 
 export const metadata: Metadata = {
   title: 'Mall-study',
@@ -18,9 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body style={{ fontFamily: 'Dongle' }}>
         <Provider>
-          <Gnb />
+          <Header />
           {children}
         </Provider>
       </body>
