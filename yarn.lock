@@ -558,11 +558,6 @@
   resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.10.5.tgz#cd9897680d0a2f1bce8d8c23a590e5874f4617c5"
   integrity sha512-eSkJsnhBWv5kCTSU1tSUVl9mpFu+5NXXunZc83le8GMjMlsWwQArSc7cJJ4yl+aDFY0NGLi0AjZWMn1axOrkRg==
 
-"@fontsource/do-hyeon@^5.0.17":
-  version "5.0.17"
-  resolved "https://registry.yarnpkg.com/@fontsource/do-hyeon/-/do-hyeon-5.0.17.tgz#f7e72b0c1d65bdd53cb3cffa7ce0ee223f32cbc6"
-  integrity sha512-/lU52wJtl+t3HuVMMSMYmBBKUMqK2XqGgN5YECLlQDlLSsNgsV7WpBL+neqctmOp2dPfvTggcOxQFbbFNPuyhg==
-
 "@fontsource/dongle@^5.0.18":
   version "5.0.18"
   resolved "https://registry.yarnpkg.com/@fontsource/dongle/-/dongle-5.0.18.tgz#b4868fb0c88b38a3c289402eff1e1f41f6eb2859"
