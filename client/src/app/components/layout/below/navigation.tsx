@@ -1,8 +1,7 @@
 'use client';
 // import '../../../public/fonts/DAYLIFE-DAY.ttf';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
-import { cn } from '@utils/clsx';
+
+import { cn } from '@utils/cn';
 
 import {
   NavigationMenu,
@@ -14,11 +13,11 @@ import {
   navigationMenuTriggerStyle,
 } from '@components/ui/navigation-menu';
 import { forwardRef } from 'react';
-import { kids, men, ourWork, women } from '../../menu';
+import { kids, men, ourWork, women } from '../../../menu';
 
-const Navigation = () => {
+const Navigation = ({ className }: { className?: string | undefined }) => {
   return (
-    <NavigationMenu style={{ fontFamily: 'Do Hyeon' }}>
+    <NavigationMenu className={className}>
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>

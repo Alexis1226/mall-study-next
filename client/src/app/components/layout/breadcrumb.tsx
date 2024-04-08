@@ -1,3 +1,5 @@
+'use client';
+
 import { Breadcrumb, BreadcrumbList } from '@components/ui/breadcrumb';
 import { BreadcrumbItem } from '@components/ui/breadcrumb';
 import { BreadcrumbLink } from '@components/ui/breadcrumb';

@@ -4,6 +4,7 @@ import '@fontsource/dongle';
 import Header from '@components/layout/header';
 import Provider from '@utils/provider';
 import localFont from 'next/font/local';
+import { cn } from '@utils/cn';
 
 export const metadata: Metadata = {
   title: 'Mall-study',
@@ -24,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${pretendard.variable}`} style={{ fontFamily: 'Dongle' }}>
+      <body className={cn(`${pretendard.variable} p-6`)} style={{ fontFamily: 'Dongle' }}>
         <Provider>
           <Header />
           {children}

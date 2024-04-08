@@ -1,19 +1,15 @@
-'use client';
-
+import { cn } from '@utils/cn';
 import CustomBreadcrumb from './breadcrumb';
-import Navigation from './navigation';
-import { useParams, usePathname } from 'next/navigation';
+import UpperDiv from './upper/upperDiv';
+import BelowDiv from './below/belowDiv';
 
 const Header = () => {
-  const params = useParams();
-  const pathname = usePathname();
-  console.log('params', params);
-  console.log('pathname', pathname);
   return (
-    <div>
-      <Navigation />
+    <section className={cn('font-pretendard')}>
+      <UpperDiv />
+      <BelowDiv />
       <CustomBreadcrumb />
-    </div>
+    </section>
   );
 };
 
