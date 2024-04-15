@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import logoImg from '@asset/img/logo.svg';
+import logoImg from 'public/svg/logo.svg';
 
 const LogoBox = () => {
   return (
