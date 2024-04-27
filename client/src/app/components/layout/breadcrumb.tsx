@@ -8,22 +8,19 @@ import { BreadcrumbPage } from '@components/ui/breadcrumb';
 import { usePathname } from 'next/navigation';
 
 const CustomBreadcrumb = () => {
-  const paths = usePathname();
-  const pathNames = paths.split('/').filter((path) => path);
-
   return (
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink href="/">Home</BreadcrumbLink>
         </BreadcrumbItem>
-        {pathNames.length > 1 &&
+        {/* {pathNames.length > 1 &&
           pathNames.map((link, index) => (
             <>
-              <BreadcrumbSeparator />
+              <BreadcrumbSeparator key={index} />
               <BreadcrumbItem>
                 <BreadcrumbLink href={`/${pathNames.slice(0, index + 1).join('/')}`}>
-                  link
+                  {link}
                 </BreadcrumbLink>
               </BreadcrumbItem>
             </>
@@ -31,7 +28,7 @@ const CustomBreadcrumb = () => {
         <BreadcrumbSeparator />
         <BreadcrumbItem>
           <BreadcrumbPage>{pathNames[pathNames.length - 1]}</BreadcrumbPage>
-        </BreadcrumbItem>
+        </BreadcrumbItem> */}
       </BreadcrumbList>
     </Breadcrumb>
   );

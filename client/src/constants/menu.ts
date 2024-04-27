@@ -1,77 +1,77 @@
 export const women: { title: string; href: string }[] = [
   {
     title: '신상품',
-    href: '/women/new-arrivals',
+    href: '/products/women/new-arrivals',
   },
   {
     title: '모두보기',
-    href: '/women/view-all',
+    href: '/products/women/view-all',
   },
   {
     title: '의류',
-    href: '/women/clothes',
+    href: '/products/women/clothes',
   },
   {
     title: '슈즈&악세사리',
-    href: '/women/shoes-accessories',
+    href: '/products/women/shoes-accessories',
   },
   {
     title: '드레스',
-    href: '/women/dresses',
+    href: '/products/women/dresses',
   },
   {
     title: '브라우스&셔츠',
-    href: '/women/blouses',
+    href: '/products/women/shirts',
   },
 ];
 
 export const men: { title: string; href: string }[] = [
   {
     title: '신상품',
-    href: '/men/new-arrivals',
+    href: '/products/men/new-arrivals',
   },
   {
     title: '모두보기',
-    href: '/men/view-all',
+    href: '/products/men/view-all',
   },
   {
     title: '의류',
-    href: '/men/clothes',
+    href: '/products/men/clothes',
   },
   {
     title: '슈즈&악세사리',
-    href: '/men/shoes-accessories',
+    href: '/products/men/shoes-accessories',
   },
 ];
 
 export const kids: { title: string; href: string }[] = [
   {
     title: '신상품',
-    href: '/kids/new-arrivals',
+    href: '/products/kids/new-arrivals',
   },
   {
     title: '모두보기',
-    href: '/kids/view-all',
+    href: '/products/kids/view-all',
   },
   {
     title: '의류',
-    href: '/kids/clothes',
+    href: '/products/kids/clothes',
   },
   {
     title: '아우터',
-    href: '/kids/outerwear',
+    href: '/products/kids/outer',
   },
   {
     title: '슈즈',
-    href: '/kids/shoe',
+    href: '/products/kids/shoes',
   },
   {
     title: '악세사리',
-    href: '/kids/accessories',
+    href: '/products/kids/accessories',
   },
   {
     title: '스포츠웨어',
-    href: '/kids/sportswear',
+    href: '/products/kids/sportswear',
   },
 ];
 

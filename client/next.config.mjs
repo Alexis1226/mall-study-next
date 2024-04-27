@@ -4,7 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'cdn-mart.baemin.com',
+        hostname: 'picsum.photos',
         port: '',
         pathname: '/**',
       },
