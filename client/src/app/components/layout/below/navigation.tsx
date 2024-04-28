@@ -13,7 +13,7 @@ import {
   navigationMenuTriggerStyle,
 } from '@components/ui/navigation-menu';
 import { forwardRef } from 'react';
-import { kids, men, ourWork, women } from '../../../menu';
+import { kids, men, ourWork, women } from '../../../../constants/menu';
 
 const Navigation = ({ className }: { className?: string | undefined }) => {
   return (

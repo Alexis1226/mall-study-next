@@ -22,7 +22,7 @@ const ProductListPage = () => {
 
   return (
     <div
-      style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(20%, 300px))' }}
+      style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(245px, 1fr))' }}
       className="grid gap-4 grid-cols-3 my-8"
     >
       <Suspense fallback={'loading..'}>

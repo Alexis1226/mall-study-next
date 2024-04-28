@@ -25,7 +25,7 @@ export const ProductCard = ({ className, item, ...props }: CardProps & { item: p
   } = item;
 
   return (
-    <Card className={cn('w-[100%]', className)} {...props}>
+    <Card className={cn('w-[100%] cursor-pointer', className)} {...props}>
       <CardHeader>
         <CardTitle
           style={{
@@ -40,10 +40,15 @@ export const ProductCard = ({ className, item, ...props }: CardProps & { item: p
         </CardTitle>
       </CardHeader>
       <CardContent className="grid gap-4">
-        <div className="relative flex items-center space-x-4 rounded-md border p-4 aspect-product">
-          <Image src={img_url[0]} alt={`image_${id}`} fill></Image>
+        <div className="relative flex items-center space-x-4 rounded-md border p-4 aspect-product overflow-hidden">
+          <Image
+            className="object-cover hover:scale-110 duration-150 ease-in-out"
+            src={img_url[0]}
+            alt={`image_${id}`}
+            fill
+          ></Image>
         </div>
-        <div>
+        <div className="flex justify-center">
           {colors?.map((color, index) => (
             <div
               key={index}
@@ -53,7 +58,6 @@ export const ProductCard = ({ className, item, ...props }: CardProps & { item: p
                 style={{ background: `${color}` }}
                 className="flex h-5 w-5 translate-y-1 rounded-full"
               />
-              {color}
             </div>
           ))}
         </div>
