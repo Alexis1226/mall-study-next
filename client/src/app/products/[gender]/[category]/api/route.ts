@@ -11,16 +11,37 @@ export async function GET(
 
   async function getData() {
     const supabase = createClient();
-    if (category === 'clothes') {
-      console.log('category.clothes.values()', category.clothes.values());
+    if (category === 'new-arrivals') {
+      const { data, error } = await supabase
+        .from('clothes')
+        .select()
+        .order('created_at', { ascending: false })
+        .eq('category_1', `${capitalize(gender)}`)
+        .limit(5);
+
+      if (error) console.error('Error fetching data:', error);
+      else {
+        return data;
+      }
+    } else if (category === 'view-all') {
       const { data, error } = await supabase
         .from('clothes')
         .select()
         .eq('category_1', `${capitalize(gender)}`)
-        .in('category_2', `${category.clothes.values()}`)
         .limit(5);
-      console.error(error);
-      // console.log('data', data);
+
+      if (error) console.error('Error fetching data:', error);
+      else {
+        return data;
+      }
+    } else if (category === 'clothes') {
+      const { data, error } = await supabase
+        .from('clothes')
+        .select()
+        .eq('category_1', `${capitalize(gender)}`)
+        .in('category_2', `${changeToDBCategory(category) as string[]}`)
+        .limit(5);
+
       return data;
     } else {
       const { data, error } = await supabase
@@ -34,6 +55,6 @@ export async function GET(
     }
   }
   const result = await getData();
-  console.log(result);
+
   return NextResponse.json({ data: result });
 }
