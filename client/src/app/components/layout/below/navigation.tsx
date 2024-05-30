@@ -10,7 +10,6 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from '@components/ui/navigation-menu';
 import { forwardRef } from 'react';
 import { kids, men, ourWork, women } from '../../../../constants/menu';

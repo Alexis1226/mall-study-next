@@ -7,10 +7,10 @@ const BelowDiv = () => {
     <div>
       <div
         className={
-          'relative grid grid-cols-[10fr_1fr] justify-items-center right-1/2 translate-x-[62.8%]'
+          'relative z-[999] grid grid-cols-[10fr_1fr] justify-items-center right-1/2 translate-x-[62.8%]'
         }
       >
-        <Navigation className="" />
+        <Navigation />
         <SearchBar className="w-[12vw] mr-[12vw]" />
       </div>
     </div>

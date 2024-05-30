@@ -9,20 +9,7 @@ import Image from 'next/image';
 type CardProps = React.ComponentProps<typeof Card>;
 
 export const ProductCard = ({ className, item, ...props }: CardProps & { item: productType }) => {
-  const {
-    id,
-    name,
-    price,
-    size,
-    colors,
-    texture,
-    thumbnail_url,
-    img_url,
-    created_at,
-    updated_at,
-    category_1,
-    category_2,
-  } = item;
+  const { id, name, price, colors, img_url } = item;
 
   return (
     <Card className={cn('w-[100%] cursor-pointer', className)} {...props}>
@@ -46,7 +33,7 @@ export const ProductCard = ({ className, item, ...props }: CardProps & { item: p
             src={img_url[0]}
             alt={`image_${id}`}
             fill
-          ></Image>
+          />
         </div>
         <div className="flex justify-center">
           {colors?.map((color, index) => (
