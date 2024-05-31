@@ -33,7 +33,10 @@ export async function GET(
       else {
         return data;
       }
-    } else if (category === 'clothes' || category === 'shoes-accessories') {
+    } else if (
+      typeof gender === 'string' &&
+      (category === 'clothes' || category === 'shoes-accessories')
+    ) {
       const searchingArray = changeToDBCategory(category) as readonly string[];
 
       const { data, error } = await supabase
@@ -47,7 +50,7 @@ export async function GET(
       else {
         return data;
       }
-    } else {
+    } else if (typeof category === 'string') {
       const { data, error } = await supabase
         .from('clothes')
         .select()
@@ -59,6 +62,8 @@ export async function GET(
       else {
         return data;
       }
+    } else {
+      console.error('Error fetching data: 정의되지 않은 category나 gender');
     }
   }
   const result = await getData();

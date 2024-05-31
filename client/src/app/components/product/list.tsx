@@ -1,13 +1,20 @@
-import { Product } from '@src/graphql/products';
-import ProductItem from './item';
+import { Suspense } from 'react';
+import ProductCard from '../card/Product';
+import { productType } from '@utils/types';
 
-const ProductList = ({ list }: { list: { products: Product[] }[] }) => {
+const ProductList = ({ data }: { data: productType[] }) => {
   return (
-    <ul className="products">
-      {list.map((page) =>
-        page.products.map((product) => <ProductItem {...product} key={product.id} />)
-      )}
-    </ul>
+    <div
+      style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(245px, 1fr))' }}
+      className="grid gap-4 grid-cols-3 my-8"
+    >
+      <Suspense fallback={'loading..'}>
+        {data?.map((value) => (
+          <ProductCard key={value.id} item={value}></ProductCard>
+        ))}
+      </Suspense>
+      {data?.length === 0 && <span className="col-span-full text-center">결과가 없습니다.</span>}
+    </div>
   );
 };
 

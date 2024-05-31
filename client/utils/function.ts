@@ -37,7 +37,6 @@ export const changeToDBCategory = (
     };
     // @ts-expect-error : 해당 블럭에는 dbCategory 타입에 해당하는 fromUrl 변수만 진입 가능
     const dbCategory: keyof typeof flatCategoryObj = fromUrl;
-    console.log('flatCategoryObj[dbCategory]', flatCategoryObj[dbCategory]);
     return flatCategoryObj[dbCategory];
   }
 };

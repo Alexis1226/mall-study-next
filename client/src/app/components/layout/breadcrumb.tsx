@@ -5,30 +5,31 @@ import { BreadcrumbItem } from '@components/ui/breadcrumb';
 import { BreadcrumbLink } from '@components/ui/breadcrumb';
 import { BreadcrumbSeparator } from '@components/ui/breadcrumb';
 import { BreadcrumbPage } from '@components/ui/breadcrumb';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const CustomBreadcrumb = () => {
+  const urlPath = usePathname();
+
   return (
-    <Breadcrumb>
+    <Breadcrumb className="mt-4 text-xs">
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink href="/">Home</BreadcrumbLink>
+          <BreadcrumbLink asChild>
+            <Link href="/">Home</Link>
+          </BreadcrumbLink>
         </BreadcrumbItem>
-        {/* {pathNames.length > 1 &&
-          pathNames.map((link, index) => (
-            <>
-              <BreadcrumbSeparator key={index} />
-              <BreadcrumbItem>
-                <BreadcrumbLink href={`/${pathNames.slice(0, index + 1).join('/')}`}>
-                  {link}
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-            </>
-          ))}
-        <BreadcrumbSeparator />
-        <BreadcrumbItem>
-          <BreadcrumbPage>{pathNames[pathNames.length - 1]}</BreadcrumbPage>
-        </BreadcrumbItem> */}
+        {urlPath
+          .split('/')
+          .slice(1)
+          .map((word) => {
+            return (
+              <>
+                <BreadcrumbSeparator key={word} />
+                <BreadcrumbItem>{word}</BreadcrumbItem>
+              </>
+            );
+          })}
       </BreadcrumbList>
     </Breadcrumb>
   );
