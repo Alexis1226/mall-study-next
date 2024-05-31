@@ -2,7 +2,6 @@
 import ProductCard from '@src/app/components/card/Product';
 import { productType } from '@utils/types';
 import axios from 'axios';
-import { Span } from 'next/dist/trace';
 import { useParams } from 'next/navigation';
 import React, { Suspense, useCallback, useEffect, useState } from 'react';
 

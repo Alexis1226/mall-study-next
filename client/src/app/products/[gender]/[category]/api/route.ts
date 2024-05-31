@@ -1,5 +1,4 @@
-import { changeToDBCategory } from '@src/constants/category';
-import { capitalize } from '@utils/capitalize';
+import { capitalize, changeToDBCategory } from '@utils/function';
 import { createClient } from '@utils/supabase/server';
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -34,15 +33,20 @@ export async function GET(
       else {
         return data;
       }
-    } else if (category === 'clothes') {
+    } else if (category === 'clothes' || category === 'shoes-accessories') {
+      const searchingArray = changeToDBCategory(category) as readonly string[];
+
       const { data, error } = await supabase
         .from('clothes')
         .select()
         .eq('category_1', `${capitalize(gender)}`)
-        .in('category_2', `${changeToDBCategory(category) as string[]}`)
+        .in('category_2', searchingArray)
         .limit(5);
 
-      return data;
+      if (error) console.error('Error fetching data:', error);
+      else {
+        return data;
+      }
     } else {
       const { data, error } = await supabase
         .from('clothes')
@@ -50,8 +54,11 @@ export async function GET(
         .eq('category_1', `${capitalize(gender)}`)
         .eq('category_2', `${changeToDBCategory(category)}`)
         .limit(5);
-      console.error(error);
-      return data;
+
+      if (error) console.error('Error fetching data:', error);
+      else {
+        return data;
+      }
     }
   }
   const result = await getData();
