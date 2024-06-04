@@ -7,7 +7,7 @@ import { cn } from '@utils/cn';
 import { objectType } from '@utils/types';
 
 export const metadata: Metadata = {
-  title: 'Mall-study',
+  title: 'H&M',
   description: 'site for studying mall',
 };
 
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(`${pretendard.variable} p-6`)} style={{ fontFamily: 'Dongle' }}>
+      <body className={cn(`${pretendard.variable}`)} style={{ fontFamily: 'Dongle' }}>
         <Provider>{children}</Provider>
       </body>
     </html>
