@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '@components/layout/header';
+import { cn } from '@utils/cn';
 
 const layout = ({
   children,
@@ -7,7 +8,7 @@ const layout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <div>
+    <div className={cn('p-4')}>
       <Header />
       {children}
     </div>
