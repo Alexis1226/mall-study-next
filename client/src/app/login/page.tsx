@@ -4,13 +4,14 @@ import Link from 'next/link';
 import { cn } from '@utils/cn';
 import { Button, buttonVariants } from '../components/ui/button';
 import { Icons } from '../components/icons';
-import { auth, providerMap, signIn } from 'auth';
+import { providerMap } from 'auth';
 import { AuthError } from 'next-auth';
-import { redirect } from 'next/navigation';
+import { redirect, useRouter } from 'next/navigation';
 import { serverSignIn } from '@utils/serverActions/auth';
 
 const LoginPage = () => {
   const [isLoading, setIsLoading] = useState<string>('');
+  const router = useRouter();
 
   const handleClick = async (id: string, name: string) => {
     setIsLoading(id);
@@ -30,11 +31,11 @@ const LoginPage = () => {
 
   return (
     <section className="container relative h-svh p-8 flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2">
-      <Link
-        href="/examples/authentication"
+      <div
+        onClick={() => router.back()}
         className={cn(
           buttonVariants({ variant: 'ghost' }),
-          'absolute right-4 top-4 md:right-8 md:top-8'
+          'absolute right-4 top-4 md:right-8 md:top-8 cursor-pointer'
         )}
       >
         <svg
@@ -51,7 +52,7 @@ const LoginPage = () => {
             clipRule="evenodd"
           ></path>
         </svg>
-      </Link>
+      </div>
       <div className="relative hidden h-svh flex-col bg-muted p-10 text-white lg:flex dark:border-r">
         <div className="absolute inset-0 bg-zinc-900" />
         <div className="relative z-20 flex items-center text-lg font-medium">

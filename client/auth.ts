@@ -13,7 +13,6 @@ export const providerMap = providers.map((provider) => {
     return { id: provider.id, name: provider.name };
   }
 });
-
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: providers,
   pages: {
