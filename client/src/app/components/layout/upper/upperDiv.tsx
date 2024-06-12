@@ -53,7 +53,9 @@ const UpperDiv = () => {
       </div>
       <LogoBox />
       <div className="flex justify-end">
-        <button>쇼핑백</button>
+        <button>
+          <Icons.cart />
+        </button>
       </div>
     </div>
   );

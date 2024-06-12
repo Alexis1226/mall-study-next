@@ -3,6 +3,15 @@ import Image from 'next/image';
 type IconProps = React.HTMLAttributes<SVGElement>;
 
 export const Icons: { [key: string]: (props: any) => JSX.Element } = {
+  cart: (props: any) => (
+    <Image
+      width="24"
+      height="24"
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAu0lEQVR4nO3ToU4DURCF4a/4phZJ09UVCLCQVEBQJIjaSiQIcFCC4RUIb8AjsbxLm01WIEg6d3Y3IPonR83JPTOTO+xJcIvHVg8YG5hznA0dcojPH5NldB8JWnds9KU301+GjPAcMTY7nSRDplhFjJc4TYZc4SRiPIp28wvhOzvABxaFWuJJAe+JkLlCun7jEDe4blc3KBd4xVtQx/4zVXucVbIe4hsbfCXrIeodj9R9hDRruMMsWd+jiC0gIC5aiqB8WgAAAABJRU5ErkJggg=="
+      alt="cart"
+      {...props}
+    />
+  ),
   out: (props: IconProps) => (
     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
