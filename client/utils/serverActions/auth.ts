@@ -5,7 +5,7 @@ export const serverSignIn = async (name: string) => {
   await signIn(name.toLowerCase(), { redirectTo: '/' });
 };
 
-export const signOutWithForm = async (formData: FormData) => {
+export const signOutWithForm = async () => {
   await signOut();
 };
 

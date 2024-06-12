@@ -6,7 +6,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import React, { useCallback, useEffect, useState } from 'react';
 import { objectType } from './types';
 import { useParams } from 'next/navigation';
-import { useMenuStore } from './zustand/menu';
+import { useMenuStore } from './zustand/store';
 
 function Provider({ children }: { children: React.ReactNode }) {
   const updateMenus = useMenuStore((state) => state.updateMenus);

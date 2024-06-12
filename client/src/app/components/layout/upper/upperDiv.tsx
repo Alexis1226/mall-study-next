@@ -1,18 +1,20 @@
 'use client';
 
-import React, { useState } from 'react';
 import LogoBox from './logoBox';
 import Link from 'next/link';
 import { getSession, signOutWithForm } from '@utils/serverActions/auth';
-import { Button } from '../../ui/button';
-import { Session } from 'next-auth';
+import { useUserStore } from '@utils/zustand/store';
+import { Button } from '@shadcn/button';
+import { Icons } from '@components/icons';
 
 const UpperDiv = () => {
-  const [user, setUser] = useState<Session | null>();
+  const user = useUserStore((state) => state.user);
+  const updateUser = useUserStore((state) => state.updateUser);
+  const removeUser = useUserStore((state) => state.removeUser);
 
   const getUser = async () => {
     const session = await getSession();
-    setUser(session);
+    updateUser(session?.user);
   };
   !user && getUser();
 
@@ -20,8 +22,15 @@ const UpperDiv = () => {
     <div className="grid grid-cols-[minmax(120px,_1fr)_1fr_minmax(120px,_1fr)] mb-[32px] h-[67px]">
       <div className="flex h-fit">
         {user ? (
-          <form action={signOutWithForm}>
-            <Button>로그아웃</Button>
+          <form
+            action={() => {
+              signOutWithForm();
+              removeUser();
+            }}
+          >
+            <Button className="border-none" variant="outline">
+              <Icons.out />
+            </Button>
           </form>
         ) : (
           <Link href="/login">

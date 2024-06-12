@@ -19,8 +19,9 @@
     ],
     "baseUrl": "./",
     "paths": {
-      "@src/*": ["src/*"],
+      "@shadcn/*": ["src/app/components/ui/*"],
       "@components/*": ["src/app/components/*"],
+      "@src/*": ["src/*"],
       "@utils/*": ["utils/*"],
       "@styles/*": ["styles/*"],
       "@asset/*": ["asset/*"]
